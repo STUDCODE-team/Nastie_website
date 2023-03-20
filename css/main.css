@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --index: calc(1vw + 1vh);
+    --color-header: #FFFFFF
+    --color-text: #CACACA
+}
+@font-face {
+    font-family: opensans-c;
+    src: url(../fonts/OpenSans-Regular.woff);
+}
+
+
+body {
+    background-image: url(../img/main-fon.jpg);
+    color: #FFFFFF;
+    font-family: opensans-c;
+    overflow-x: hidden;
+}
+.gradient{
+    width: calc(var(--index)*70);
+    position: absolute;
+    height: 100vh;
+}
+
+a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Панель управления */
+.header{
+    display: flex;
+    justify-content: space-between;    
+    background:none;
+}
+.header_section{
+    display: flex;
+    align-items: center;
+}
+/* .fixed_navbar{
+    position: fixed;
+} */
+.header_item{
+    padding: 1vw;
+    font-size: 20px;
+    margin-left: 1vw;
+}
+.header_item:hover{
+    background-color: gray;
+    border-radius: 4px;
+}
+.header_logo{
+    font-weight: bold;
+}
+.header_button{
+    margin-right: 5vw;
+}
+
+/* Первая часть */
+.first_section{
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw;
+}
+.first_section_item{
+    padding: 1vw 1vh;
+    font-size: 20px;
+    margin-left: 5vw;
+}
+.first_section_words{
+    font-weight:bold;
+    font-size: 5vw;
+    padding-top: 12vw;
+    color: #FFFFFF;
+    width: min-content;
+}
+li{
+    color: #cacaca;
+    padding-top: 10vh;
+}
+.first_section_picture{
+    margin-right: 3vw;
+    background: none;
+}
+
+/* Вторая часть */
+.second_section{
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw;
+}
+.second_section_words{
+    font-weight:bold;
+    font-size: 3vw;
+    padding-top: 12vw;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+
+}
+.first_part{
+    text-align: left;
+    margin-right: 20vw;
+}
+.second_part{
+    text-align: center;
+}
+.third_part{
+    text-align: right;
+}
+.second_section_download{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20vh;
+}
+.second_section_download_1{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 1vw;
+}
+.icon_download{
+    width: 4vw;
+    align-items: center;
+}
+/* .apple{
+    padding-left: 13vw;
+}
+.android{
+    padding: ;
+} */
+.words_download_phone{
+    font-size: .8vw;
+    padding: 0;
+    text-align: center;
+    color: #cacaca;
+    padding-top: 10px;
+}
+
+/* Третья часть */
+.third_section{
+    display: flex;
+    justify-content: center;
+    padding-top: 3vw;
+}
+.third_section_words{
+    display:flex;
+    flex-direction: column;
+    padding-top: 12vh;
+}
+.third_section_download{
+    padding-top: 5vh;
+}
+.words_download_comp{
+    width: min-content;
+    padding-left: 20px;
+    color: #cacaca;
+    padding-right: 0;
+}
+.third_section_MacBook{
+    padding: 0;
+}
+
+/* Четвертая часть */
+.fourth_section{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3vw;
+}
+.fourth_section_words{
+    padding-left: 8vw;
+}
+.fourth_section_map{
+    padding-top: 6vh;
+    padding-left: 3vw;
+    width: 30vw;
+}
+
+/* footer */
+.footer_background{
+    width: calc(var(--index)*70);
+    position: absolute;
+    height: 25vh;
+}
+.footer_section_head{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    color: #cacaca;
+}
+.footer_left{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 7vw;
+    padding-top: 5vh;
+}
+.footer_right{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 7vw;
+    padding-top: 5vh;
+}
+.developers{
+    padding-left: 15.2vw;
+}
+.footer_section_name{
+    position: relative;
+}
+.footer_section_item{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5vw;
+    padding-top: 3.8vh;
+}
+.footer_section_middle{
+    color:#cacaca;   
+}
+.footer_name{
+    color:#cacaca;
+    padding-right: 2vw;
+    padding-left: 1vw;
+}
+.footer_section_icon{
+    padding-right: 7vw;
+}
+.footer_icon{
+    padding-right: 1vw;
+}
