@@ -1,0 +1,23 @@
+# This workflow will build a golang project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
+
+name: Web
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: deploying to the server
+      uses: appleboy/ssh-action@master
+      with:
+        host: nastie.online
+        username: root
+        key: ${{secrets.SERVER_SSH}}
+        port: 22
+        script: | 
+         cd /home/admin/web/nastie.online/public_html/
+         rm -r *
+         cd ..
+         git clone https://github.com/STUDCODE-team/Nastie_website.git public_html/
