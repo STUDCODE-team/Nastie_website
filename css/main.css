@@ -21,9 +21,9 @@ body {
     overflow-x: hidden;
 }
 .gradient{
-    width: calc(var(--index)*70);
+    width: 100%;
     position: absolute;
-    height: 100vh;
+    height: calc(var(--index)*40);
 }
 
 a{
@@ -40,52 +40,63 @@ a{
 .header_section{
     display: flex;
     align-items: center;
+    position: relative;
 }
-/* .fixed_navbar{
-    position: fixed;
-} */
 .header_item{
     padding: 1vw;
-    font-size: 20px;
+    font-size: 1vw;
     margin-left: 1vw;
 }
-.header_item:hover{
+/* .header_item:hover{
     background-color: gray;
     border-radius: 4px;
+} */
+.logo{
+    padding-left: 4vw;
+    width: calc(var(--index)*10);
+    padding-top: 1vh;
 }
-.header_logo{
-    font-weight: bold;
+.main_head{
+    width: calc(var(--index)*6);
+    padding-top: 1vh;
 }
 .header_button{
     margin-right: 5vw;
+    font-size: calc(var(--index)*1);
 }
 
 /* Первая часть */
 .first_section{
     display: flex;
     justify-content: space-between;
-    padding: 3vw;
 }
 .first_section_item{
     padding: 1vw 1vh;
-    font-size: 20px;
+    font-size: 20wv;
     margin-left: 5vw;
 }
 .first_section_words{
     font-weight:bold;
     font-size: 5vw;
-    padding-top: 12vw;
+    padding-top: 20vh;
     color: #FFFFFF;
     width: min-content;
 }
 li{
     color: #cacaca;
-    padding-top: 10vh;
+    padding-top: calc(var(--index)*3);
+    font-size: calc(var(--index)*.6);
 }
 .first_section_picture{
     margin-right: 3vw;
     background: none;
 }
+.first_section_phone{
+    width: calc(var(--index)*23);
+    padding-right: 3vw;
+    padding-top: 7vh;
+}
+
 
 /* Вторая часть */
 .second_section{
@@ -96,7 +107,8 @@ li{
 .second_section_words{
     font-weight:bold;
     font-size: 3vw;
-    padding-top: 12vw;
+    padding-top: 20vh;
+    padding-right: 24vw;
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
@@ -126,12 +138,11 @@ li{
     width: 4vw;
     align-items: center;
 }
-/* .apple{
-    padding-left: 13vw;
+.second_section_phone{
+    width: calc(var(--index)*30);
+    padding-top: 5vh;
+    padding-left: 5vw;
 }
-.android{
-    padding: ;
-} */
 .words_download_phone{
     font-size: .8vw;
     padding: 0;
@@ -145,6 +156,7 @@ li{
     display: flex;
     justify-content: center;
     padding-top: 3vw;
+    padding-right: 15vw;
 }
 .third_section_words{
     display:flex;
@@ -153,6 +165,7 @@ li{
 }
 .third_section_download{
     padding-top: 5vh;
+    width: calc(var(--index)*10);
 }
 .words_download_comp{
     width: min-content;
@@ -162,6 +175,7 @@ li{
 }
 .third_section_MacBook{
     padding: 0;
+    width: calc(var(--index)*20);
 }
 
 /* Четвертая часть */
@@ -172,16 +186,21 @@ li{
 }
 .fourth_section_words{
     padding-left: 8vw;
+    font-size: calc(var(--index)*.6);
 }
 .fourth_section_map{
     padding-top: 6vh;
     padding-left: 3vw;
     width: 30vw;
 }
+.fourth_section_phone{
+    width: calc(var(--index)*40);
+    padding-bottom: 0;
+}
 
 /* footer */
 .footer_background{
-    width: calc(var(--index)*70);
+    width: 100%;
     position: absolute;
     height: 25vh;
 }
@@ -214,18 +233,48 @@ li{
     justify-content: space-between;
     padding-left: 5vw;
     padding-top: 3.8vh;
+    font-size: calc(var(--index)*.6);
 }
 .footer_section_middle{
-    color:#cacaca;   
+    color:#cacaca;
+    font-size: calc(var(--index)*.6); 
 }
 .footer_name{
     color:#cacaca;
     padding-right: 2vw;
     padding-left: 1vw;
+    font-size: calc(var(--index)*.6);
 }
 .footer_section_icon{
     padding-right: 7vw;
 }
 .footer_icon{
     padding-right: 1vw;
+    width: calc(var(--index)*2);
+}
+
+/* Адаптив */
+@media(min-width:0px) and (max-width:400px) {
+    .header_item{
+        font-size: 12px;
+        padding: 5px;
+    }
+    .logo{
+        width: 80px;
+    }
+    .main_head{
+        width: 50px;
+    }
+    .header_button{
+        margin-right: 0px;
+        font-size: 10px;
+    }
+    .first_section_phone{
+        width: calc(var(--index)*23);
+        padding-top: 3vh;
+        padding-right: 0;
+    }
+    .third_section_MacBook{
+        display: none;
+    }
 }
